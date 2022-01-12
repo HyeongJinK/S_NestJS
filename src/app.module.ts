@@ -5,7 +5,6 @@ import { CatsController } from './cats/cats.controller';
 import { TestController } from './test/test.controller';
 import { CatsModule } from './cats/cats.module';
 import { UserModule } from './user/user.module';
-import { User.SigninController } from './user.signin/user.signin.controller';
 
 @Module({
   imports: [CatsModule, UserModule],

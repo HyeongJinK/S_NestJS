@@ -1,4 +1,3 @@
-import { Controller } from '@nestjs/common';
-
-@Controller('signup')
-export class SignupController {}
+export interface SignupController {
+  signup(): string;
+}
