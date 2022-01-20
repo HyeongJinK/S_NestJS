@@ -1,11 +1,11 @@
-##   추가
+##  앱 추가
 
 ```bash
-nest g app api
+nest g app [name]
 ```
 
 ## 라이브러리 추가
 
 ```bash
-nest g lib model
+nest g lib [name]
 ```
