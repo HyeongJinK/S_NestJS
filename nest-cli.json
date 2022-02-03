@@ -8,15 +8,6 @@
     "tsConfigPath": "apps/first-project/tsconfig.app.json"
   },
   "projects": {
-    "first-project": {
-      "type": "application",
-      "root": "apps/first-project",
-      "entryFile": "main",
-      "sourceRoot": "apps/first-project/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/first-project/tsconfig.app.json"
-      }
-    },
     "api": {
       "type": "application",
       "root": "apps/api",

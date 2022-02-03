@@ -1,10 +1,25 @@
 import { Module } from '@nestjs/common';
-import { ApiController } from './api.controller';
-import { ApiService } from './api.service';
+import { realTypeOrmModule } from '../../../libs/model/RealTypeOrmModule';
+import { BannerModule } from './banner/banner.module';
+import { ConfigModule } from '@nestjs/config';
+import { GlobalExceptionFilter } from '@app/common/filter/global-exception.filter';
+import { HealthModule } from './health/health.module';
 
 @Module({
-  imports: [],
-  controllers: [ApiController],
-  providers: [ApiService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: `.env.${process.env.NODE_ENV}`,
+    }),
+    realTypeOrmModule(),
+    HealthModule,
+    BannerModule,
+  ],
+  providers: [
+    {
+      provide: 'GLOBAL_EXCEPTION_FILTER',
+      useClass: GlobalExceptionFilter,
+    },
+  ],
 })
 export class ApiModule {}
