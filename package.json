@@ -90,7 +90,8 @@
     ],
     "moduleNameMapper": {
       "^@app/model(|/.*)$": "<rootDir>/libs/model/src/$1",
-      "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1"
+      "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1",
+      "^@app/machine(|/.*)$": "<rootDir>/libs/machine/src/$1"
     }
   }
 }

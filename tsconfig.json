@@ -29,6 +29,12 @@
       ],
       "@app/common/*": [
         "libs/common/src/*"
+      ],
+      "@app/machine": [
+        "libs/machine/src"
+      ],
+      "@app/machine/*": [
+        "libs/machine/src/*"
       ]
     }
   }
