@@ -9,6 +9,7 @@
 * lib
     * common
     * model
+    * machine
 
 ## 패키지 경로 규칙
 

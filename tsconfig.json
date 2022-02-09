@@ -30,11 +30,29 @@
       "@app/common/*": [
         "libs/common/src/*"
       ],
-      "@app/machine": [
-        "libs/machine/src"
+      "@app/user": [
+        "libs/user/src"
       ],
-      "@app/machine/*": [
-        "libs/machine/src/*"
+      "@app/user/*": [
+        "libs/user/src/*"
+      ],
+      "@app/board": [
+        "libs/board/src"
+      ],
+      "@app/board/*": [
+        "libs/board/src/*"
+      ],
+      "@app/message": [
+        "libs/message/src"
+      ],
+      "@app/message/*": [
+        "libs/message/src/*"
+      ],
+      "@app/auth": [
+        "libs/auth/src"
+      ],
+      "@app/auth/*": [
+        "libs/auth/src/*"
       ]
     }
   }

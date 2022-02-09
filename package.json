@@ -29,7 +29,9 @@
     "@nestjs/swagger": "^5.2.0",
     "@nestjs/terminus": "^8.0.4",
     "@nestjs/typeorm": "^8.0.2",
+    "@types/geojson": "^7946.0.8",
     "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "cross-env": "^7.0.3",
     "helmet": "^5.0.2",
     "nest-winston": "^1.6.2",
@@ -91,7 +93,10 @@
     "moduleNameMapper": {
       "^@app/model(|/.*)$": "<rootDir>/libs/model/src/$1",
       "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1",
-      "^@app/machine(|/.*)$": "<rootDir>/libs/machine/src/$1"
+      "^@app/user(|/.*)$": "<rootDir>/libs/user/src/$1",
+      "^@app/board(|/.*)$": "<rootDir>/libs/board/src/$1",
+      "^@app/message(|/.*)$": "<rootDir>/libs/message/src/$1",
+      "^@app/auth(|/.*)$": "<rootDir>/libs/auth/src/$1"
     }
   }
 }

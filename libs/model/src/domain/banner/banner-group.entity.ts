@@ -9,7 +9,7 @@ import {
 } from 'typeorm';
 import { Banner } from '@app/model/domain/banner/banner.entity';
 
-@Entity('banner_group', { database: process.env.TR_DB_NAME })
+@Entity('banner_group', { database: process.env.DEFAULT_DB_NAME })
 export class BannerGroup {
   @PrimaryGeneratedColumn('uuid')
   @ApiProperty()

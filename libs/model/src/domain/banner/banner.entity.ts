@@ -5,7 +5,7 @@ import { BannerLinkType } from '@app/model/domain/banner/enumable/banner-link-ty
 import { BannerStatus } from '@app/model/domain/banner/enumable/banner-status.enum';
 import { BaseTimeEntity } from '@app/model/domain/BaseTimeEntity';
 
-@Entity('banner', { database: process.env.TR_DB_NAME })
+@Entity('banner', { database: process.env.DEFAULT_DB_NAME })
 export class Banner extends BaseTimeEntity{
   @ManyToOne(() => BannerGroup, (bannerGroup) => bannerGroup.id)
   @ApiProperty()

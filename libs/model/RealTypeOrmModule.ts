@@ -12,11 +12,11 @@ export function realTypeOrmModule() {
     useFactory: async (configService: ConfigService) => {
       return {
         type: 'postgres',
-        host: configService.get('TR_DB_HOST'),
-        username: configService.get('TR_DB_USER'),
-        password: configService.get('TR_DB_PASS'),
-        database: configService.get('TR_DB_NAME'),
-        port: configService.get('TR_DB_PORT'),
+        host: configService.get('DEFAULT_DB_HOST'),
+        username: configService.get('DEFAULT_DB_USER'),
+        password: configService.get('DEFAULT_DB_PASS'),
+        database: configService.get('DEFAULT_DB_NAME'),
+        port: configService.get('DEFAULT_DB_PORT'),
         entities: [entityPath],
         autoLoadEntities: true,
         synchronize: true,

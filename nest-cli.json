@@ -44,13 +44,40 @@
         "tsConfigPath": "apps/admin/tsconfig.app.json"
       }
     },
-    "machine": {
+    "user": {
       "type": "library",
-      "root": "libs/machine",
+      "root": "libs/user",
       "entryFile": "index",
-      "sourceRoot": "libs/machine/src",
+      "sourceRoot": "libs/user/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/machine/tsconfig.lib.json"
+        "tsConfigPath": "libs/user/tsconfig.lib.json"
+      }
+    },
+    "board": {
+      "type": "library",
+      "root": "libs/board",
+      "entryFile": "index",
+      "sourceRoot": "libs/board/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/board/tsconfig.lib.json"
+      }
+    },
+    "message": {
+      "type": "library",
+      "root": "libs/message",
+      "entryFile": "index",
+      "sourceRoot": "libs/message/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/message/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
       }
     }
   }
