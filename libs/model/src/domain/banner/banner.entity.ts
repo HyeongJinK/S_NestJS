@@ -6,11 +6,10 @@ import { BannerStatus } from '@app/model/domain/banner/enumable/banner-status.en
 import { BaseTimeEntity } from '@app/model/domain/BaseTimeEntity';
 
 @Entity('banner', { database: process.env.DEFAULT_DB_NAME })
-export class Banner extends BaseTimeEntity{
+export class Banner extends BaseTimeEntity {
   @ManyToOne(() => BannerGroup, (bannerGroup) => bannerGroup.id)
   @ApiProperty()
-  @JoinColumn({ name: 'banner_group_id' })
-  banner_group: BannerGroup;
+  bannerGroup: BannerGroup;
 
   @Column()
   @ApiProperty()
@@ -22,19 +21,19 @@ export class Banner extends BaseTimeEntity{
 
   @Column()
   @ApiProperty()
-  image_url: string;
+  imageUrl: string;
 
   @Column({
     nullable: true,
   })
   @ApiProperty()
-  open_at: Date;
+  openAt: Date;
 
   @Column({
     nullable: true,
   })
   @ApiProperty()
-  close_at: Date;
+  closeAt: Date;
 
   @ApiProperty()
   @Column({
@@ -50,13 +49,13 @@ export class Banner extends BaseTimeEntity{
     enum: BannerLinkType,
     default: BannerLinkType.APP,
   })
-  link_type: BannerLinkType;
+  linkType: BannerLinkType;
 
   @Column({ nullable: true })
   @ApiProperty()
-  link_url: string;
+  linkUrl: string;
 
   @Column({ nullable: true })
   @ApiProperty()
-  order_num: number;
+  orderNum: number;
 }

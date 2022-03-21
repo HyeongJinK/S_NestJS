@@ -4,7 +4,6 @@ import { GlobalExceptionFilter } from '@app/common/filter/global-exception.filte
 import helmet from 'helmet';
 import { originalCorsConfigure } from './configuration/cors.configuration';
 import { customLogger } from './configuration/logger.configuration';
-import { RouterLoggerMiddleware } from '@app/common/middlewares/router-logger.middleware';
 import { swaggerConfiguration } from './configuration/swagger.configuration';
 
 async function bootstrap() {
@@ -16,7 +15,7 @@ async function bootstrap() {
   app.enableCors(originalCorsConfigure());
 
   if (process.env.NODE_ENV !== 'production') {
-    app.use(RouterLoggerMiddleware);
+    // app.use(RouterLoggerMiddleware);
     swaggerConfiguration(app);
   }
 

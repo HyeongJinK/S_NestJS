@@ -1,20 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  Column,
-  CreateDateColumn,
-  Entity,
-  Index,
-  OneToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, Index, OneToMany } from 'typeorm';
 import { Banner } from '@app/model/domain/banner/banner.entity';
+import { BaseTimeEntity } from '@app/model/domain/BaseTimeEntity';
 
 @Entity('banner_group', { database: process.env.DEFAULT_DB_NAME })
-export class BannerGroup {
-  @PrimaryGeneratedColumn('uuid')
-  @ApiProperty()
-  id: string;
-
+export class BannerGroup extends BaseTimeEntity{
   @Column({ unique: true })
   @Index()
   @ApiProperty()
@@ -24,10 +14,7 @@ export class BannerGroup {
   @ApiProperty()
   description: string;
 
-  @OneToMany(() => Banner, (banner) => banner.banner_group)
+  @OneToMany(() => Banner, (banner) => banner.bannerGroup)
   @ApiProperty()
-  banner: Banner[];
-
-  @CreateDateColumn({ type: 'timestamptz' })
-  created_at: Date;
+  banners: Banner[];
 }

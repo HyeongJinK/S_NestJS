@@ -11,12 +11,14 @@ export class BannerService {
   ) {}
 
   async getActiveBanners(group: string): Promise<Banner[]> {
-    const bannerGroup = await this.bannerGroupRepository.getActiveBanners(group);
+    const bannerGroup = await this.bannerGroupRepository.getActiveBanners(
+      group,
+    );
 
     if (bannerGroup === undefined) {
       return [];
     }
 
-    return bannerGroup.banner;
+    return bannerGroup.banners;
   }
 }
